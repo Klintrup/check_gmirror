@@ -7,11 +7,11 @@ permissions:
 
 jobs:
   sh:
-    name: sh-verify-syntax
+    name: simple-shell-syntax-check
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: Klintrup/simple-shell-syntax-check@main
+      - uses: Klintrup/simple-shell-syntax-check@v1
   shellcheck:
     name: shellcheck
     runs-on: ubuntu-latest
