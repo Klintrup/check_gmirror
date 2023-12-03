@@ -27,7 +27,7 @@ do
   case $(echo ${DEVICESTRING}|tr '[:upper:]' '[:lower:]'|sed -Ee 's/.*(complete|degraded|starting).*/\1/') in
    degraded)
     # shellcheck disable=SC2143
-    if [ $(gmirror list "${DEVICE}"|grep "^   Flags"|grep -q "SYNCHRONIZING") ]
+    if [ "$(gmirror list "${DEVICE}"|grep "^   Flags"|grep -q "SYNCHRONIZING")" ]
     then
      if ! [ "${ERR}" = 2 ] || [ "${ERR}" = 3 ]; then ERR=1;fi
      ERRORSTRING="${ERRORSTRING} / ${DEVICE}: rebuilding"
