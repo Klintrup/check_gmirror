@@ -41,4 +41,4 @@ The script should work on any FreeBSD platform until gmirror changes input/outpu
 FreeBSD 6.2  
 FreeBSD 6.3  
 FreeBSD 7.0(amd64)  
-FreeBSD 8.0(amd64)  
+FreeBSD 8.0(amd64)
