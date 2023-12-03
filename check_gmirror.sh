@@ -1,8 +1,7 @@
 #!/bin/sh
 # NRPE check for gmirror
-# Written by: Søren Klintrup <soren at klintrup.dk>
-# Get your copy from http://soren.klintrup.dk/gmirror/
-# version 1.1
+# Written by: SÃ¸ren Klintrup <github at klintrup.dk>
+
 
 PATH="/sbin:/bin:/usr/sbin:/usr/bin"
 if [ -x "/sbin/gmirror" ]
