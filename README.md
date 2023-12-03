@@ -18,12 +18,12 @@ Failed/rebuilding volumes will always be first in the output string, to help dia
 
 ### Output Examples
 
-| output | description |
-| -- | -- |
-| ok | The device is reported as ok by gmirror |
-| DEGRADED | The volume is degraded, it's still working but without the safety of RAID, and in some cases with severe performance loss. |
-| rebuilding | The RAID is rebuilding, will return to OK when done. Expect performance degradation while volume is rebuilding. |
-| starting | The geom device is currently starting, you shouldn't see this and will return an unknown code to nagios |
+| output        | description                                                                                                                                                                |
+| ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ok            | The device is reported as ok by gmirror                                                                                                                                    |
+| DEGRADED      | The volume is degraded, it's still working but without the safety of RAID, and in some cases with severe performance loss.                                                 |
+| rebuilding    | The RAID is rebuilding, will return to OK when done. Expect performance degradation while volume is rebuilding.                                                            |
+| starting      | The geom device is currently starting, you shouldn't see this and will return an unknown code to nagios                                                                    |
 | unknown state | Volume is in an unknown state. Please report this to me (github at klintrup.dk) so I can update the script. Include the following output. `gmirror status`, `gmirror list` |
 
 ## Compability
