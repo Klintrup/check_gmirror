@@ -11,14 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Verify script syntax
-        run: |
-          for file in $(find . -type f -name '*.sh'); do
-            echo "::group::${file}"
-            echo "Checking ${file}"
-            sh -n "${file}"
-            echo "::endgroup::"
-          done
+      - uses: Klintrup/simple-shell-syntax-check@main
   shellcheck:
     name: shellcheck
     runs-on: ubuntu-latest
