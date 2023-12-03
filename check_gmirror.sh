@@ -2,6 +2,8 @@
 # NRPE check for gmirror
 # Written by: Søren Klintrup <github at klintrup.dk>
 
+unset ERRORSTRING OKSTRING ERR DEVICES DEVICE DEVICESTRING
+
 PATH="/sbin:/bin:/usr/sbin:/usr/bin"
 if [ -x "/sbin/gmirror" ]
 then
@@ -11,10 +13,6 @@ else
  ERRORSTRING="gmirror binary does not exist on system"
  ERR=3
 fi
-
-unset ERRORSTRING
-unset OKSTRING
-unset ERR
 
 for DEVICE in ${DEVICES}
 do
