@@ -2,7 +2,6 @@
 # NRPE check for gmirror
 # Written by: Søren Klintrup <github at klintrup.dk>
 
-
 PATH="/sbin:/bin:/usr/sbin:/usr/bin"
 if [ -x "/sbin/gmirror" ]
 then
