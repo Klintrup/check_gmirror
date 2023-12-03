@@ -4,7 +4,11 @@ This is a Nagios/NRPE check script designed to monitor the status of gmirror vol
 
 ## Syntax
 
-`$path/check_gmirror.sh`
+`$path/check_gmirror.sh [email] [email]`
+
+If no arguments are specified, the script will assume its run for NRPE.
+
+If one or more email addresses are specified, the script will send an email in case an array reports an error.
 
 ## Output
 

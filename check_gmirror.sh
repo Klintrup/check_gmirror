@@ -3,7 +3,14 @@
 # Written by: Søren Klintrup <github at klintrup.dk>
 
 PATH="/sbin:/bin:/usr/sbin:/usr/bin"
-DEVICES="$(gmirror list|grep "Geom name"|sed -Ee 's/Geom name: //')"
+if [ -x "/sbin/gmirror" ]
+then
+ DEVICES="$(gmirror list|grep "Geom name"|sed -Ee 's/Geom name: //')"
+else
+ ERRORSTRING="gmirror binary does not exist on system"
+ ERR=3
+fi
+
 unset ERRORSTRING
 unset OKSTRING
 unset ERR
@@ -37,11 +44,20 @@ do
    esac
  fi
 done
-if [ "${ERRORSTRING}" -o "${OKSTRING}" ]
+
+if [ "${1}" ]
 then
- echo ${ERRORSTRING} ${OKSTRING}|sed s/"^\/ "//
- exit ${ERR}
+ if [ "${ERRORSTRING}" ]
+ then
+  echo "${ERRORSTRING} ${OKSTRING}"|sed s/"^\/ "//|mail -s "$(hostname -s): ${0} reports errors" -E ${*}
+ fi
 else
- echo no raid volumes found
- exit 3
+ if [ "${ERRORSTRING}" -o "${OKSTRING}" ]
+ then
+  echo ${ERRORSTRING} ${OKSTRING}|sed s/"^\/ "//
+  exit ${ERR}
+ else
+  echo no raid volumes found
+  exit 3
+ fi
 fi
