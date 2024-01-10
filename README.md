@@ -1,6 +1,5 @@
 # monitor gmirror from NRPE / cron for FreeBSD
 
-[![CodeFactor](https://www.codefactor.io/repository/github/klintrup/check_gmirror/badge)](https://www.codefactor.io/repository/github/klintrup/check_gmirror)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/cc158957feef461bad697b8ecedbdd50)](https://app.codacy.com/gh/Klintrup/check_gmirror/dashboard)
 [![License Apache 2.0](https://img.shields.io/github/license/Klintrup/check_gmirror)](https://github.com/Klintrup/check_gmirror/blob/main/LICENSE)
 [![Latest Release](https://img.shields.io/github/v/release/Klintrup/check_gmirror)](https://github.com/Klintrup/check_gmirror/releases)
