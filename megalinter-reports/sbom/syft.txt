@@ -1,0 +1,12 @@
+[0000]  WARN no explicit name and version provided for directory source, deriving artifact ID from the given path (which is not ideal)
+NAME                                         VERSION                                   TYPE                           
+Klintrup/simple-shell-syntax-check           v2.3.0                                    github-action                   
+SonarSource/sonarqube-scan-action            aa494459d7c39c106cc77b166de8b4250a32bb97  github-action                   
+actions/checkout                             11bd71901bbe5b1630ceea73d27597364c9af683  github-action                   
+actions/checkout                             v4                                        github-action  (+2 duplicates)  
+codacy/codacy-analysis-cli-action            97bf5df3c09e75f5bcd72695998f96ebd701846e  github-action                   
+creyD/prettier_action                        v4.3                                      github-action                   
+github/codeql-action/upload-sarif            v2                                        github-action                   
+oxsecurity/megalinter/flavors/documentation  v8                                        github-action                   
+stefanzweifel/git-auto-commit-action         v5                                        github-action                   
+tj-actions/changed-files                     823fcebdb31bb35fdf2229d9f769b400309430d0  github-action
