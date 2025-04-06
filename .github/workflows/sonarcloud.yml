@@ -5,6 +5,16 @@ on:
       - main
   pull_request:
     types: [opened, synchronize, reopened]
+permissions: 
+  contents: read # Required for SonarQube to read the code
+  issues: write # Required for SonarQube to create issues
+  pull-requests: write # Required for SonarQube to create PR comments
+  security-events: write # Required for SonarQube to upload SARIF results
+  actions: read # Required for SonarQube to get the Action run status
+  checks: write # Required for SonarQube to create checks
+  statuses: write # Required for SonarQube to create statuses
+  deployments: write # Required for SonarQube to create deployments
+
 jobs:
   sonarqube:
     name: SonarQube
